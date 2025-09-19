@@ -1,0 +1,112 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body */
+body {
+  background: #f3f8f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #2e7d32, #66bb6a);
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.username {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.site-title {
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-align: center;
+  flex: 1;
+  letter-spacing: 1px;
+}
+
+/* Chapters Section */
+.chapters {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.chapters h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #2e7d32;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.chapter-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.chapter {
+  background: white;
+  padding: 2rem 1rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-left: 6px solid #2e7d32;
+}
+
+.chapter:hover {
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.chapter h3 {
+  font-size: 1.2rem;
+  color: #1b5e20;
+  font-weight: 600;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .site-title {
+    font-size: 1.4rem;
+  }
+
+  .chapter {
+    padding: 1.5rem;
+  }
+}

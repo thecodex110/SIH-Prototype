@@ -1,0 +1,33 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Sign In - Sustainable Farming</title>
+   <link rel="stylesheet" href="login.css">
+ </head>
+ <body>
+   <div class="login-container">
+     <h1>🌱KrishiQuest</h1>
+     <h2>Log In with Phone or E-Mail</h2>
+ 
+     <!-- Step 1: Phone Number -->
+     <div id="phone-step">
+       <input type="text" id="phone" placeholder="📱 Enter Phone Number or E-Mail Id" required>
+       <button onclick="SendOTP()">Send OTP</button>
+     </div>
+ 
+     <!-- Step 2: OTP Verification -->
+     <div id="otp-step" style="display:none;">
+       <input type="text" id="otp" placeholder="🔑 Enter OTP" required>
+       <button onclick="VerifyOTP()">Verify OTP</button>
+     </div>
+ 
+     <!-- Back to normal login -->
+      <div>
+       <button onclick="window.location.href='login.html'">Go to Sign Up Page</button>
+     </div>
+ 
+   <script src="script.js"></script>
+ </body>
+ </html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crop Selection Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>🌱KrishiQuest</h2>
+
+  <div class="form-container">
+
+
+    <label for="cropCount">🌾 How many crops you want to grow?</label>
+    <select id="cropCount" onchange="showCropSelection()">
+      <option value="">-- Select --</option>
+      <option value="1">1 Crop</option>
+      <option value="2">2 Crops</option>
+    </select>
+
+    <div id="cropSelectionArea"></div>
+
+    <button class="btn" onclick="submitForm()">Proceed</button>
+  </div>
+
+  <div class="result-box" id="resultBox"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

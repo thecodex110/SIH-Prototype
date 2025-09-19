@@ -1,0 +1,106 @@
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url(Photo/photo-1499529112087-3cb3b73cec95.avif);
+  padding: 40px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* Heading */
+h2 {
+  color: #1b5e20;
+  font-size: 28px;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Form Container */
+.form-container {
+  max-width: 600px;
+  margin: auto;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0px 8px 25px rgba(0,0,0,0.15);
+  transition: 0.3s ease;
+}
+.form-container:hover {
+  transform: translateY(-5px);
+}
+
+/* Labels */
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 20px;
+  text-align: left;
+  color: #2e7d32;
+  font-size: 15px;
+}
+
+/* Inputs & Dropdowns */
+select, input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 10px;
+  border: 1px solid #bdbdbd;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+  background: #f9fff9;
+}
+select:focus, input:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 6px rgba(46, 125, 50, 0.4);
+}
+
+/* Crop Selection Boxes */
+.crop-box {
+  margin-top: 18px;
+  text-align: left;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background: #f1f8e9;
+  transition: 0.3s;
+}
+.crop-box:hover {
+  background: #e8f5e9;
+  transform: scale(1.01);
+}
+
+/* Submit Button */
+.btn {
+  margin-top: 30px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #43a047, #2e7d32);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: linear-gradient(135deg, #2e7d32, #1b5e20);
+  transform: scale(1.08);
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.25);
+}
+
+/* Result Box */
+.result-box {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 14px;
+  background: #ffffff;
+  border: 2px solid #2e7d32;
+  display: none;
+  box-shadow: 0px 6px 18px rgba(0,0,0,0.15);
+}
+.result-box h3 {
+  color: #2e7d32;
+  margin-bottom: 12px;
+}

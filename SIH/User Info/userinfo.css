@@ -1,0 +1,93 @@
+/* Background */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url(Photo/women-9152739_1280.jpg);
+  background-size: 100% 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form container */
+.form-container {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+  width: 400px;
+  text-align: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.form-container h1 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.form-container h2 {
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* Input fields */
+form input, form select, form button {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+form input:focus, form select:focus {
+  border-color: #4CAF50;
+  box-shadow: 0px 0px 8px rgba(76, 175, 80, 0.5);
+  outline: none;
+}
+
+/* Button */
+form button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #388E3C;
+  transform: scale(1.05);
+}
+
+/* Avatar section */
+.avatar-section {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.3s, border 0.3s;
+}
+
+.avatar:hover {
+  transform: scale(1.2);
+  border: 2px solid #4CAF50;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

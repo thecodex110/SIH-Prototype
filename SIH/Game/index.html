@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gamified Farming Platform</title>
+  <link rel="stylesheet" href="gamestyle.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="profile">
+      👤 <strong>ABCDEF</strong>
+    </div>
+    <div class="streak">
+      🔥 Streak: <span id="streakCount">1</span> days
+    </div>
+  </div>
+
+  <!-- Level Card -->
+  <div class="level">
+    <h2>Level 1: Organic Soil Preparation</h2>
+    <video controls>
+      <source src="video1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="info">
+      आज हम सीखेंगे कि मिट्टी को ऑर्गेनिक तरीके से कैसे तैयार करें ताकि फसल अच्छी और स्वस्थ हो।
+    </div>
+
+    <!-- Upload Section -->
+    <div class="upload-box">
+      <label>📷 अपनी मिट्टी की फोटो अपलोड करें:</label><br>
+      <input type="file" id="photoUpload" accept="image/*">
+    </div>
+
+    <!-- Status -->
+    <div id="status" class="status incomplete">❌ Task Incomplete</div>
+
+    <!-- Next Button -->
+    <button id="nextBtn" class="next-btn" disabled>Next Level ➡️</button>
+  </div>
+
+  <script>
+    const uploadInput = document.getElementById("photoUpload");
+    const statusDiv = document.getElementById("status");
+    const nextBtn = document.getElementById("nextBtn");
+    const streakCount = document.getElementById("streakCount");
+
+    uploadInput.addEventListener("change", () => {
+      if (uploadInput.files.length > 0) {
+        statusDiv.textContent = "✅ Task Complete";
+        statusDiv.classList.remove("incomplete");
+        statusDiv.classList.add("complete");
+        nextBtn.disabled = false;
+
+        // streak +1 (demo)
+        streakCount.textContent = parseInt(streakCount.textContent) + 1;
+      }
+    });
+  </script>
+
+</body>
+</html>

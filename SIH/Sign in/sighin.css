@@ -1,0 +1,111 @@
+/* Background with animated gradient */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url(Photo/tractor-9779346_1280.jpeg);
+  background-size: 100% 100%;
+  animation: gradientMove 12s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Moving gradient animation */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Login Card */
+.login-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 20px;
+  width: 370px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+  animation: slideUp 1s ease;
+  backdrop-filter: blur(10px);
+}
+
+/* Slide-up animation */
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+/* Logo */
+.logo {
+  font-size: 60px;
+  margin-bottom: 15px;
+  animation: bounce 1.5s infinite;
+}
+
+/* Logo bounce animation */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Headings */
+h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #2f6f2f;
+  font-weight: 700;
+}
+h2 {
+  margin: 12px 0 25px;
+  font-size: 18px;
+  color: #555;
+  font-weight: normal;
+}
+
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #43cea2;
+  box-shadow: 0 0 10px rgba(67,206,162,0.5);
+  transform: scale(1.02);
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #56ab2f, #2f6f2f);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Smooth fade for OTP step */
+#otp-step {
+  animation: fadeIn 0.8s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

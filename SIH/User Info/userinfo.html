@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Information - Sustainable Farming</title>
+  <link rel="stylesheet" href="userinfo.css">
+</head>
+<body>
+  <div class="form-container">
+    <h1>🌱KrishiQuest</h1>
+    <h2>Complete Your Profile</h2>
+
+    <!-- Avatar selection -->
+    <label for="avatar">Choose Avatar:</label>
+    <div class="avatar-section">
+      <img src="avatar1.png" alt="Avatar 1" class="avatar">
+      <img src="avatar2.png" alt="Avatar 2" class="avatar">
+      <img src="avatar3.png" alt="Avatar 3" class="avatar">
+    </div>
+
+    <!-- User Details -->
+    <form id="userForm">
+      <input type="text" id="name" placeholder="Full Name" required>
+      <input type="number" id="age" placeholder="Age" required>
+      <input type="text" id="address" placeholder="Address" required>
+      <input type="text" id="pincode" placeholder="Pin Code" required>
+
+      <!-- Land Ownership -->
+      <label>Do you own land?</label>
+      <select id="landOwnership" onchange="toggleLandInput()">
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+      </select>
+
+      <!-- Land Details (Hidden initially) -->
+      <div id="landDetails" style="display:none;">
+        <input type="number" id="landArea" placeholder="Land Area (in Acres)">
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script src="userinfo.js"></script>
+</body>
+</html>

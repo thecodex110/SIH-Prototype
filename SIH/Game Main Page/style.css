@@ -1,0 +1,138 @@
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #29ff3e, #15e8ffa5, #ffffff , #b6f8ffa5 , #f75f5f , #b6f8ffa5 );
+  background-size: 400% 600%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background: #43a047;
+  color: white;
+  padding: 15px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+header .logo {
+  font-size: 28px;
+}
+
+/* Progress Container */
+.progress-container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Level Circle */
+.level {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 26px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+/* Completed Levels */
+.completed {
+  background: #4caf50;
+  color: white;
+}
+.completed:hover {
+  transform: scale(1.1);
+}
+
+/* Locked Levels */
+.locked {
+  background: #cfd8dc;
+  color: #757575;
+  cursor: not-allowed;
+}
+
+/* Zig-Zag Layout */
+.progress-container .level:nth-child(odd) {
+  align-self: flex-start;
+  margin-left: 60px;
+}
+.progress-container .level:nth-child(even) {
+  align-self: flex-end;
+  margin-right: 60px;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+.close {
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Status */
+.status {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+}
+.incomplete {
+  color: #b71c1c;
+  background: #ffebee;
+}
+.complete {
+  color: #1b5e20;
+  background: #e8f5e9;
+}
+
+/* Next Button */
+.next-btn {
+  margin-top: 18px;
+  background: linear-gradient(135deg, #66bb6a, #43a047);
+  color: white;
+  border: none;
+  padding: 14px 22px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+.next-btn:disabled {
+  background: #c8e6c9;
+  cursor: not-allowed;
+}
+.next-btn:hover:enabled {
+  transform: scale(1.05);
+}

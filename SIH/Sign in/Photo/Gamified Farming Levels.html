@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gamified Farming Levels</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="profile">👤 Ravi Kumar</div>
+    <div class="logo">Logo Or Name</div>
+    <div class="streak">🔥 Streak: <span id="streakCount">3</span></div>
+  </header>
+
+  <!-- Levels -->
+  <div class="progress-container">
+    <div class="level-wrapper">
+      <div class="level-label">Level 1</div>
+      <div class="level completed" onclick="openLevel(1)">✔</div>
+    </div>
+    <div class="level-wrapper">
+      <div class="level-label">Level 2</div>
+      <div class="level completed" onclick="openLevel(2)">✔</div>
+    </div>
+    <div class="level-wrapper">
+      <div class="level-label">Level 3</div>
+      <div class="level completed" onclick="openLevel(3)">✔</div>
+    </div>
+    <div class="level-wrapper">
+      <div class="level-label">Level 4</div>
+      <div class="level locked">❌</div>
+    </div>
+    <div class="level-wrapper">
+      <div class="level-label">Level 5</div>
+      <div class="level locked">❌</div>
+    </div>
+    <div class="level-wrapper">
+      <div class="level-label">Level 6</div>
+      <div class="level locked">❌</div>
+    </div>
+    <div class="level-wrapper">
+      <div class="level-label">Level 7</div>
+      <div class="level locked">❌</div>
+    </div>
+  </div>
+
+  <!-- Modal (for Level Content) -->
+  <div id="levelModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="levelTitle">Level</h2>
+      <video controls id="levelVideo">
+        <source src="video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p id="levelInfo">Information will appear here.</p>
+      <div class="upload-box">
+        <label>📷 Upload your task photo:</label>
+        <input type="file" id="photoUpload" accept="image/*">
+      </div>
+      <div id="status" class="status incomplete">❌ Task Incomplete</div>
+      <button id="nextBtn" class="next-btn" disabled>Next Level ➡️</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
